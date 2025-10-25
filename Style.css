@@ -86,3 +86,37 @@ footer {
   background: #3b82f6;
   transform: scale(1.05);
 }
+/* ===== Skills Section ===== */
+.skills-section {
+  padding: 60px 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skill-icons img {
+  width: 70px;
+  height: 70px;
+  margin: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 5px #2563eb);
+}
+
+.skill-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 15px #3b82f6);
+}
+
