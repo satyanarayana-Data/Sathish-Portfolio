@@ -7,92 +7,115 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/icons/data.svg">
 </head>
+
 <body>
   <!-- ===== HEADER ===== -->
-  <header>
-    <div class="top-bar">
-      <div class="left">
-        <h2><span>Sathish - Data Analyst - Data Scientist /</span></h2>
-      </div>
-      <div class="right">
-        <nav>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="https://github.com/satyanarayana-Data" target="_blank">GitHub</a>
-        </nav>
-      </div>
+  <header class="top-bar">
+    <div class="left">
+      <h2><span>Sathish - Data Analyst / Data Scientist</span></h2>
+    </div>
+    <div class="right">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/satyanarayana-Data" target="_blank">GitHub</a>
+      </nav>
     </div>
   </header>
 
   <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="about-section">
-    <div class="about-text">
-      <h1>About Me</h1>
-      <p>
-        I’m a results-driven Data Analyst and Business Analyst with over 5 years of experience transforming complex datasets into actionable insights that drive strategic decisions. My background spans data management, business intelligence, and predictive analytics across industries like telecom, healthcare, and manufacturing. I specialize in building automated data pipelines, interactive dashboards, and machine learning workflows that improve business performance, operational efficiency, and customer retention. With hands-on experience in SQL, Python, Power BI, Tableau, Snowflake, and Azure, I’m passionate about bridging the gap between data and decision-making.
-      </p>
-
-      <!-- 🧾 Resume Download Button -->
-      <a class="resume-btn" href="assets/Sathish-Mekarthi-Resume.pdf" target="_blank">📄 Download Resume</a>
-    </div>
-    <div class="about-image">
-      <img src="images/profile.jpg" alt="Sathish Profile Picture">
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="images/profile.jpg" alt="Sathish Profile Picture" class="profile-pic">
+    <p>
+      I’m a results-driven Data Analyst and Business Analyst with over 5 years of experience
+      transforming complex datasets into actionable insights that drive strategic decisions.
+      My background spans data management, business intelligence, and predictive analytics
+      across industries like telecom, healthcare, and manufacturing.
+    </p>
+    <p>
+      I specialize in building automated data pipelines, interactive dashboards, and machine
+      learning workflows that improve business performance, operational efficiency, and customer
+      retention. With hands-on experience in SQL, Python, Power BI, Tableau, Snowflake, and Azure,
+      I’m passionate about bridging the gap between data and decision-making.
+    </p>
+    <a class="btn" href="#" target="_blank">📄 Download Resume</a>
   </section>
-  
+
   <!-- ===== EXPERIENCE ===== -->
-  <section id="experience" class="experience-section">
+  <section id="experience">
     <h2>Experience</h2>
-    <div class="buttons">
-      <button onclick="showExp('softtech')">SoftTech</button>
-      <button onclick="showExp('tcs')">TCS</button>
-      <button onclick="showExp('aurobindo')">Aurobindo</button>
+    <div class="exp-container">
+      <div class="exp-card">
+        <h3>SoftTech</h3>
+        <p>Data Analyst | 2023 - Present</p>
+        <p>Developed end-to-end BI dashboards and automated data reports improving decision speed by 30%.</p>
+      </div>
+      <div class="exp-card">
+        <h3>TCS</h3>
+        <p>Business Analyst | 2020 - 2023</p>
+        <p>Led client analytics reporting for telecom and healthcare, focusing on operational KPIs and revenue optimization.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Aurobindo</h3>
+        <p>Data Analyst | 2018 - 2020</p>
+        <p>Built automated Excel and SQL-based reports, reducing manual workload by 40%.</p>
+      </div>
     </div>
-    <div id="exp-details"></div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="projects-section">
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="project-buttons">
-      <button onclick="showProj('warehouse')">Data Warehouse Implementation</button>
-      <button onclick="showProj('financial')">Financial Trends Dashboard</button>
-      <button onclick="showProj('sales')">Sales and Revenue Analysis</button>
-      <button onclick="showProj('modern')">Sales Data Modernization</button>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Data Warehouse Implementation</h3>
+        <p>Designed a scalable data warehouse integrating multiple data sources into Snowflake.</p>
+      </div>
+      <div class="project-card">
+        <h3>Financial Trends Dashboard</h3>
+        <p>Created Power BI dashboards for financial KPI monitoring and executive reporting.</p>
+      </div>
+      <div class="project-card">
+        <h3>Sales & Revenue Analysis</h3>
+        <p>Developed Python scripts for revenue forecasting using regression and time-series models.</p>
+      </div>
+      <div class="project-card">
+        <h3>Sales Data Modernization</h3>
+        <p>Automated ETL pipelines with Azure Data Factory and improved data refresh cycles.</p>
+      </div>
     </div>
-    <div id="proj-details"></div>
   </section>
 
   <!-- ===== SKILLS ===== -->
-<section id="skills" class="skills-section">
-  <h2>Skills</h2>
-  <div class="skill-icons">
-    <img src="images/icons/python.svg" alt="Python" title="Python" />
-    <img src="images/icons/mysql.svg" alt="SQL / MySQL" title="SQL / MySQL" />
-    <img src="images/icons/powerbi.svg" alt="Power BI" title="Power BI" />
-    <img src="images/icons/tableau.svg" alt="Tableau" title="Tableau" />
-    <img src="images/icons/excel.svg" alt="Excel" title="Microsoft Excel" />
-    <img src="images/icons/azure.svg" alt="Azure" title="Azure" />
-    <img src="images/icons/aws.svg" alt="AWS" title="AWS" />
-    <img src="images/icons/snowflake.svg" alt="Snowflake" title="Snowflake" />
-  </div>
-</section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <img src="images/icons/python.svg" alt="Python">
+      <img src="images/icons/mysql.svg" alt="MySQL">
+      <img src="images/icons/powerbi.svg" alt="Power BI">
+      <img src="images/icons/tableau.svg" alt="Tableau">
+      <img src="images/icons/excel.svg" alt="Excel">
+      <img src="images/icons/azure.svg" alt="Azure">
+      <img src="images/icons/aws.svg" alt="AWS">
+      <img src="images/icons/snowflake.svg" alt="Snowflake">
+    </div>
+  </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <h2>Contact Me</h2>
     <p>📧 <a href="mailto:Satyanarayana.m9813@gmail.com">Satyanarayana.m9813@gmail.com</a></p>
     <p>📞 +1 (630) 463-9897</p>
-    <p>💼 <a href="https://www.linkedin.com/in/sathish-mekarthi-652676350/" target="_blank">LinkedIn Profile</a></p>
+    <p>💼 <a href="#" target="_blank">LinkedIn Profile</a></p>
     <p>🐙 <a href="https://github.com/satyanarayana-Data" target="_blank">GitHub Profile</a></p>
   </section>
 
   <footer>
     <p>© 2025 Sathish Mekarthi | Built with 💡 & Data</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
