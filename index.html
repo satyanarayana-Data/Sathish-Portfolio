@@ -1,129 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sathish - Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/icons/data.svg">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sathish - Data Analyst Portfolio</title>
+<style>
+  /* ===== GLOBAL ===== */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #001F3F, #E63946);
+    scroll-behavior: smooth;
+  }
+  a { color: #FFD166; text-decoration: none; }
+  h2 { color: #FFD166; text-align: center; margin-bottom: 12px; }
+
+  /* ===== HEADER ===== */
+  header {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(0,0,0,0.85);
+    padding: 12px 35px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    flex-wrap: wrap;
+  }
+  .logo { font-weight: bold; font-size: 18px; color: #FFD166; margin-bottom: 5px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+  nav a {
+    margin-left: 18px; font-weight: 500; transition: 0.3s;
+  }
+  nav a:hover { color: #06D6A0; transform: scale(1.1); }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 90px 25px 40px; max-width: 980px; margin: auto; }
+
+  /* ===== ABOUT ===== */
+  #about {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 50px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 35px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.45);
+    margin-top: 80px;
+  }
+  .about-text { flex: 1 1 65%; }
+  .about-text p { line-height: 1.6; font-size: 15.8px; }
+  .profile-pic {
+    flex: 1 1 30%;
+    max-width: 270px;
+    height: 340px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }
+  .resume-btn {
+    background: #FFD166; color: #000; border: none;
+    padding: 10px 22px; border-radius: 6px; cursor: pointer;
+    font-weight: bold; margin-top: 12px; transition: 0.3s;
+  }
+  .resume-btn:hover { background: #06D6A0; transform: scale(1.05); }
+
+  /* ===== EXPERIENCE & PROJECTS ===== */
+  .button-group {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px; margin-bottom: 15px;
+  }
+  button {
+    background: #FFD166; color: #000; padding: 8px 16px;
+    border-radius: 5px; border: none; font-weight: bold;
+    cursor: pointer; transition: 0.3s;
+  }
+  button:hover { background: #06D6A0; transform: scale(1.05); box-shadow: 0 0 10px #FFD166; }
+  .content-box {
+    background: rgba(255,255,255,0.1); border-radius: 8px; padding: 20px;
+    animation: fadeIn 0.3s; display: none; line-height: 1.55; font-size: 15px;
+  }
+
+  /* ===== SKILLS ===== */
+  .skills {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 8px;
+  }
+  .skill {
+    background: #FFD166; color: #000; padding: 8px 15px;
+    border-radius: 6px; font-weight: bold; font-size: 14px; transition: 0.3s;
+  }
+  .skill:hover { background: #06D6A0; transform: scale(1.05); box-shadow: 0 0 6px #FFD166; }
+
+  /* ===== CONTACT ===== */
+  .contact { text-align: center; font-size: 17px; line-height: 1.7; }
+  .contact p { margin-top: 10px; font-size: 13px; }
+
+  @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; padding: 15px; }
+    nav { justify-content: center; flex-wrap: wrap; }
+    nav a { margin: 6px; }
+    #about { flex-direction: column; text-align: center; margin-top: 85px; padding: 35px 25px; }
+    .profile-pic { margin-top: 15px; height: 300px; width: 80%; }
+  }
+</style>
 </head>
-
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="top-bar">
-    <div class="left">
-      <h2><span>Sathish - Data Analyst / Data Scientist</span></h2>
-    </div>
-    <div class="right">
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/satyanarayana-Data" target="_blank" class="btn-nav">GitHub</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="about-section">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I’m a results-driven Data Analyst and Business Analyst with over 5 years of experience
-          transforming complex datasets into actionable insights that drive strategic decisions.
-        </p>
-        <p>
-          My expertise spans data management, BI, and predictive analytics across telecom, healthcare, and manufacturing.
-          I build automated data pipelines, interactive dashboards, and machine learning workflows that drive performance.
-        </p>
-        <div class="buttons">
-          <a class="btn" href="resume.pdf" download>📄 Download Resume</a>
-          <a class="btn" href="#" target="_blank">💼 LinkedIn</a>
-          <a class="btn" href="https://github.com/satyanarayana-Data" target="_blank">🐙 GitHub</a>
-        </div>
-      </div>
-      <div class="about-image">
-        <img src="images/profile.jpg" alt="Sathish Profile Picture" class="profile-pic">
-      </div>
-    </div>
-  </section>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">Sathish - Data Analyst / Data Scientist</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="exp-container">
-      <div class="exp-card">
-        <h3>SoftTech</h3>
-        <p>Data Analyst | 2023 - Present</p>
-        <p>Developed end-to-end BI dashboards and automated data reports improving decision speed by 30%.</p>
-      </div>
-      <div class="exp-card">
-        <h3>TCS</h3>
-        <p>Business Analyst | 2020 - 2023</p>
-        <p>Led client analytics reporting for telecom and healthcare, focusing on operational KPIs and revenue optimization.</p>
-      </div>
-      <div class="exp-card">
-        <h3>Aurobindo</h3>
-        <p>Data Analyst | 2018 - 2020</p>
-        <p>Built automated Excel and SQL-based reports, reducing manual workload by 40%.</p>
-      </div>
-    </div>
-  </section>
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>I’m a results-driven Data Analyst and Business Analyst with over 5 years of experience transforming complex datasets into actionable insights that drive strategic decisions. My expertise spans data management, BI, and predictive analytics across telecom, healthcare, and manufacturing industries.</p>
+    <p>I build automated data pipelines, interactive dashboards, and machine learning workflows that drive performance and efficiency. I’m passionate about translating data into decisions that create measurable business impact.</p>
+   <a href="Sathish Mekarthi Resume .pdf" download class="resume-btn">📄 Download Resume</a>
+  </div>
+  <img src="profile.jpg" alt="Sathish Profile" class="profile-pic">
+</section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <h3>Data Warehouse Implementation</h3>
-        <p>Designed a scalable data warehouse integrating multiple data sources into Snowflake.</p>
-      </div>
-      <div class="project-card">
-        <h3>Financial Trends Dashboard</h3>
-        <p>Created Power BI dashboards for financial KPI monitoring and executive reporting.</p>
-      </div>
-      <div class="project-card">
-        <h3>Sales & Revenue Analysis</h3>
-        <p>Developed Python scripts for revenue forecasting using regression and time-series models.</p>
-      </div>
-      <div class="project-card">
-        <h3>Sales Data Modernization</h3>
-        <p>Automated ETL pipelines with Azure Data Factory and improved data refresh cycles.</p>
-      </div>
-    </div>
-  </section>
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="button-group">
+    <button onclick="showExp('infos')">InfoSoft Solutions LLC</button>
+    <button onclick="showExp('tcs')">TCS</button>
+    <button onclick="showExp('auro')">Aurobindo Pharma</button>
+  </div>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <img src="images/icons/python.svg" alt="Python">
-      <img src="images/icons/mysql.svg" alt="MySQL">
-      <img src="images/icons/powerbi.svg" alt="Power BI">
-      <img src="images/icons/tableau.svg" alt="Tableau">
-      <img src="images/icons/excel.svg" alt="Excel">
-      <img src="images/icons/azure.svg" alt="Azure">
-      <img src="images/icons/aws.svg" alt="AWS">
-      <img src="images/icons/snowflake.svg" alt="Snowflake">
-    </div>
-  </section>
+  <div id="infos" class="content-box">
+    <ul>
+      <li>Analyze large datasets to extract insights supporting business decisions.</li>
+      <li>Build and maintain Tableau and Excel dashboards for real-time metrics.</li>
+      <li>Develop automated SQL and Python-based pipelines reducing manual reporting by 80%.</li>
+      <li>Conduct EDA to detect anomalies and trends.</li>
+      <li>Collaborate cross-functionally to define analytical requirements and deliver actionable insights.</li>
+      <li>Implemented predictive churn models achieving 18% churn reduction.</li>
+    </ul>
+  </div>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section contact-section">
-    <h2>Contact Me</h2>
-    <p>📧 <a href="mailto:Satyanarayana.m9813@gmail.com">Satyanarayana.m9813@gmail.com</a></p>
-    <p>📞 +1 (630) 463-9897</p>
-    <p>💼 <a href="#" target="_blank">LinkedIn Profile</a></p>
-    <p>🐙 <a href="https://github.com/satyanarayana-Data" target="_blank">GitHub Profile</a></p>
-  </section>
+  <div id="tcs" class="content-box">
+    <ul>
+      <li>Designed and implemented 100+ KPIs and 30+ unified tables using Power BI and SQL for executive decision-making.</li>
+      <li>Built centralized data lake using Snowflake and Azure Data Factory, integrating 10+ source systems.</li>
+      <li>Created 30+ ETL pipelines processing 2TB+ daily data from ERP, CRM, and billing systems.</li>
+      <li>Developed real-time dashboards reducing reporting latency from 48 hours to 2 hours.</li>
+      <li>Integrated predictive analytics for churn and network outage forecasting.</li>
+      <li>Ensured GDPR and HIPAA compliance securing sensitive data.</li>
+    </ul>
+  </div>
 
-  <footer>
+  <div id="auro" class="content-box">
+    <ul>
+      <li>Built Tableau dashboards for real-time production and packaging metrics.</li>
+      <li>Designed KPIs improving transparency and efficiency.</li>
+      <li>Automated reporting workflows reducing manual effort by 60%.</li>
+      <li>Implemented predictive analytics for machine breakdowns lowering stoppages by 20%.</li>
+      <li>Developed inventory dashboards optimizing costs by 12%.</li>
+      <li>Improved OEE by 10%, saving $1.2M annually.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="button-group">
+    <button onclick="showProj('proj1')">Data Warehouse</button>
+    <button onclick="showProj('proj2')">Financial Dashboard</button>
+    <button onclick="showProj('proj3')">Sales & Revenue</button>
+    <button onclick="showProj('proj4')">Churn Analysis</button>
+  </div>
+
+  <div id="proj1" class="content-box">
+    <h3>Data Warehouse Implementation & Analysis (GCP, DAGs, Cloud SQL, ETL)</h3>
+    <p>Designed and implemented a robust data warehouse leveraging Google Cloud Platform. Using Google Cloud Composer, I architected three scalable environments and established a secure Virtual Private Cloud for Cloud SQL. Developed and orchestrated ETL pipelines using DAGs, ensuring smooth ingestion, transformation, and storage of large datasets. The project improved workflow efficiency, automated data processing, and provided secure, scalable analytics capabilities for cross-functional teams.</p>
+  </div>
+
+  <div id="proj2" class="content-box">
+    <h3>Financial Trends Dashboard in Food Sector (Snowflake, Power BI, ETL)</h3>
+    <p>Developed an interactive financial analytics dashboard to monitor revenue trends, profit margins, and market performance in the food sector. Extracted large datasets from multiple sources using Snowflake and performed ETL processes for clean, consolidated reporting. Designed dynamic KPIs, time-series analyses, and visualizations in Power BI to identify growth opportunities and optimize strategic business decisions. This project resulted in a 20% improvement in strategic business insights for the client.</p>
+  </div>
+
+  <div id="proj3" class="content-box">
+    <h3>Sales and Revenue Analysis (Power BI, SQL, Data Visualization)</h3>
+    <p>Built interactive Power BI dashboards to analyze regional sales performance and customer segmentation. Leveraged SQL for data extraction, cleaning, and transformation. Implemented KPIs, drill-down capabilities, and trend analyses to monitor revenue, profit margins, and sales efficiency. The solution helped business leaders quickly identify underperforming regions, optimize sales strategies, and make data-driven decisions, improving operational efficiency.</p>
+  </div>
+
+  <div id="proj4" class="content-box">
+    <h3>Customer Retention & Churn Analysis Platform (Python, SQL, Tableau, Azure)</h3>
+    <p>Led the development of a predictive analytics platform to identify high-risk customers and reduce churn. Processed 5M+ customer records from CRM and transactional systems, applied exploratory data analysis, and built predictive models to assess churn probability. Developed automated ETL pipelines and Tableau dashboards to visualize customer segments and retention metrics. Collaborated with marketing and customer success teams to implement retention campaigns, achieving an 18% reduction in churn and saving ~$400K in recurring revenue.</p>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div><div class="skill">R Programming</div><div class="skill">SQL</div>
+    <div class="skill">Power BI</div><div class="skill">Tableau</div><div class="skill">Excel</div>
+    <div class="skill">AWS</div><div class="skill">Azure</div><div class="skill">PySpark</div>
+    <div class="skill">Databricks</div><div class="skill">Snowflake</div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact">
+    <a href="mailto:Satyanarayana.m9813@gmail.com">📧 Satyanarayana.m9813@gmail.com</a><br>
+    <a href="tel:+16304639897">📞 +1 (630) 463-9897</a><br>
+    <a href="https://www.linkedin.com/in/sathish-mekarthi-652676350" target="_blank">💼 LinkedIn Profile</a><br>
+    <a href="https://github.com/satyanarayana-Data" target="_blank">🐙 GitHub Profile</a>
     <p>© 2025 Sathish Mekarthi | Built with 💡 & Data</p>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<script>
+function showExp(id) {
+  document.querySelectorAll('#experience .content-box').forEach(b => b.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+function showProj(id) {
+  document.querySelectorAll('#projects .content-box').forEach(b => b.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
 </body>
 </html>
