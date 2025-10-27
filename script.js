@@ -1,4 +1,4 @@
-// Smooth fade-in effect when elements appear on screen
+// Smooth fade-in effect for sections
 const elements = document.querySelectorAll('.exp-card, .project-card, .about-content');
 
 const observer = new IntersectionObserver(entries => {
